@@ -28,7 +28,9 @@ export default class Form extends React.Component {
   render() {
     return (
       <form>
-        <input onChange={this.handleChange}/>
+        <input 
+          onChange={this.handleChange}
+          value={this.state.input}/>
         <button onClick={this.handleSubmit}>Add</button>
       </form>
     )

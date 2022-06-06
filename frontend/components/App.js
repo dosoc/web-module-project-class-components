@@ -49,9 +49,7 @@ export default class App extends React.Component {
     });
   }
 
-  handleToggle = (clickedID) => {
-
-  
+  handleToggle = (clickedID) => {  
     this.setState({
       ...this.state,
       todos: this.state.todos.map(todo=> {
