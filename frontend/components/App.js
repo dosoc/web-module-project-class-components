@@ -1,16 +1,37 @@
 import React from 'react'
+import TodoList from './TodoList'
 
 export default class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      todos: [
+        {
+          task: "Win the State Open",
+          id: 10000,
+          completed: false
+        },
+        {
+          task: "Read a book",
+          id: 10001,
+          completed: false
+        },
+        {
+          task: "Make the Cut",
+          id: 10002,
+          completed: false
+        }
+      ]
+    }
+  }
   render() {
+    const {todos} = this.state;
+    console.log(todos)
     return (
       <div>
         <h1>Todos</h1>
 
-        <ul>
-          <li>Drive to Chatanooga</li>
-          <li>Read a book</li>
-          <li>Win the State Open</li>
-        </ul>
+        <TodoList todos={todos}/>
 
         <form>
           <input/>
